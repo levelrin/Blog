@@ -20,9 +20,11 @@ comments: true
 </ul>
 
 <ul>
-  <li>
-    {{ page.tags }}
-  </li>
+  {% for tag in page.tags %}
+    <li>
+      <a href="/tag/{{ tag }}">{{ tag }}</a>
+    </li>
+  {% endfor %}
 </ul>
 
 {{ content }}
