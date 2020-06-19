@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<ul>
+  {% for tag in site.tags %}
+    {% assign currentTag = page.url | split: "/" | last%}
+    {% if currentTag == tag[0] %}
+      {% for post in tag[1] %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+</ul>
