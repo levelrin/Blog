@@ -32,6 +32,13 @@ keywords:
           <a href="{{ post.url | absolute_url }}#disqus_thread"></a>
         </li>
       </ul>
+      <ul>
+        {% for tag in post.tags %}
+          <li>
+            <a href="/tag/{{ tag }}">{{ tag }}</a>
+          </li>
+        {% endfor %}
+      </ul>
       {{ post.excerpt }}
       <a href="{{ post.url }}">Read more</a>
     </li>
