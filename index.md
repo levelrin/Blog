@@ -14,6 +14,7 @@ keywords:
       <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
       <ul>
         <li>{{ post.created }}</li>
+        <li>{{ post.content | number_of_words }} words</li>
       </ul>
     </li>
   {% endfor %}
