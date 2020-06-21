@@ -11,7 +11,10 @@ keywords:
 <ul>
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+      <ul>
+        <li>{{ post.created }}</li>
+      </ul>
     </li>
   {% endfor %}
 </ul>
