@@ -33,6 +33,7 @@ keywords:
         </li>
       </ul>
       {{ post.excerpt }}
+      <a href="{{ post.url }}">Read more</a>
     </li>
   {% endfor %}
 </ul>
