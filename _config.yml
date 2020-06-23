@@ -5,6 +5,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-archives
+  - jekyll-paginate-v2
 
 jekyll-archives:
   enabled:
@@ -17,3 +18,15 @@ jekyll-archives:
     day: '/:year/:month/:day/'
     tag: '/tag/:name/'
     category: '/category/:name/'
+
+pagination:
+  enabled: true
+  per_page: 15
+  offset: 0
+  permalink: '/page/:num/'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
