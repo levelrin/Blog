@@ -14,10 +14,20 @@ All tags:
 {% endfor %}
 
 All posts:
-{% for post in site.posts %}
-  * [{{ post.title }}]({{ post.url }})
-    * {{ post.created | date: "%-d %B %Y" }}
-    * {% for tag in post.tags %}
-        [{{ tag }}](/tag/{{ tag }})
-      {% endfor %}
-{% endfor %}
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <ul>
+        <li>
+          <time>{{ post.created | date: "%-d %B %Y" }}</time>
+        </li>
+        <li>
+          {% for tag in post.tags %}
+            <a href="/tag/{{ tag }}">{{ tag }}</a>
+          {% endfor %}
+        </li>
+      </ul>
+    </li>
+  {% endfor %}
+</ul>
