@@ -16,5 +16,8 @@ All tags:
 All posts:
 {% for post in site.posts %}
   * [{{ post.title }}]({{ post.url }})
-    * {{ page.created | date: "%-d %B %Y" }}
+    * {{ post.created | date: "%-d %B %Y" }}
+    * {% for tag in post.tags %}
+        [{{ tag }}](/tag/{{ tag }})
+      {% endfor %}
 {% endfor %}
