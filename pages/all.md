@@ -16,4 +16,5 @@ All tags:
 All posts:
 {% for post in site.posts %}
   * [{{ post.title }}]({{ post.url }})
+    * {{ page.created | date: "%-d %B %Y" }}
 {% endfor %}
