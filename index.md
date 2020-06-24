@@ -15,7 +15,9 @@ pagination:
     <li>
       <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
       <ul>
-        <li>{{ post.created }}</li>
+        <li>
+          <time>{{ post.created | date: "%-d %B %Y" }}</time>
+        </li>
         <li>{{ post.content | number_of_words }} words</li>
         <li>
           {% capture words %}
