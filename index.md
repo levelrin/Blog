@@ -36,7 +36,7 @@ pagination:
     {% endfor %}
   </div>
   {{ post.excerpt }}
-  <a href="{{ post.url }}">Read more</a>
+  <a class="text-secondary" href="{{ post.url }}">Read more</a>
   <div class="mt-5"></div>
 {% endfor %}
 
