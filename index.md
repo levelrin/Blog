@@ -11,7 +11,7 @@ pagination:
 ---
 
 {% for post in paginator.posts %}
-  <h1><a class="text-dark" href="{{ post.url }}">{{ post.title }}</a></h1>
+  <h2><a class="text-dark" href="{{ post.url }}">{{ post.title }}</a></h1>
   <div>
     {% assign right_margin = "mr-2" %}
     {% assign text_color = "text-secondary" %}
