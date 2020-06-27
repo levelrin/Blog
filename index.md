@@ -15,7 +15,8 @@ pagination:
   <div>
     {% assign right_margin = "mr-2" %}
     {% assign text_color = "text-secondary" %}
-    <time class="{{ right_margin }} {{ text_color }}">{{ post.created | date: "%-d %B %Y" }}</time>
+    <time class="{{ text_color }}">{{ post.created | date: "%b %d, %Y" }}</time>
+    <span>&middot;</span>
     {% capture words %}
       {{ post.content | number_of_words | minus: 180 }}
     {% endcapture %}
