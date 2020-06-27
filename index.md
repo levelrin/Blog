@@ -32,7 +32,7 @@ pagination:
   </div>
   <div>
     {% for tag in post.tags %}
-      <a href="/tag/{{ tag }}">{{ tag }}</a>
+      <a href="/tag/{{ tag }}">#{{ tag }}</a>
     {% endfor %}
   </div>
   {{ post.excerpt }}
