@@ -7,6 +7,9 @@ plugins:
   - jekyll-archives
   - jekyll-paginate-v2
 
+sass:
+  style: compressed
+
 jekyll-archives:
   enabled:
     - tags
